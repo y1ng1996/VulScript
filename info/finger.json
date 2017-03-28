@@ -1,0 +1,111 @@
+{
+  "lan": [
+	{
+	  "gitlab": {
+		"header": {},
+		"body": "GitLab Community Edition|navbar-gitlab|gon.default_issues_tracker|gon.api_version"
+	  },
+	  "hadoop": {
+		"body": "hadoop-st.png|dr.who|About Apache Hadoop"
+	  },
+	  "confluence": {
+		"body": "Atlassian Confluence|confluence-context-path"
+	  },
+	  "solr": {
+		"body": "Apache SOLR"
+	  },
+	  "spark": {
+		"body": "Spark Master|spark://"
+	  },
+	  "splunk": {
+		"body": "Splunk.util.normalizeBoolean"
+	  },
+	  "resin": {
+		"header": {}
+	  },
+	  "reviewBoard": {
+		"header": {
+		  "set-cookie": "Resin"
+		}
+	  },
+	  "phpmyadmin": {
+		"body": "phpmyadmin.css.php|alt=\"phpMyAdmin\""
+	  },
+	  "zabbix": {
+		"header": {
+		  "set-cookie": "zbx_sessionid"
+		},
+		"body": "phpmyadmin.css.php|alt=\"phpMyAdmin\""
+	  },
+	  "visualsvn": {
+		"body": "VisualSVN Server"
+	  },
+	  "vmware": {
+		"body": "ID_EESX_Welcome|ID_ESX_VCServerDesc|ID_ESX_VIClientDesc|VMware ESXi provides a highly"
+	  },
+	  "jenkins": {
+		"header": {
+		  "body": "Jenkins|asynchPeople|Jenkins ver|projectRelationship"
+		}
+	  }
+	}
+  ],
+  "language": [
+	{
+	  "jsp": {
+		"header": {
+		  "set-cookie": "JSESSIONID|JServSessionId"
+		}
+	  }
+	},
+	{
+	  "asp": {
+		"header": {
+		  "set-cookie": "ASPSESSIONID"
+		}
+	  }
+	},
+	{
+	  "aspx": {
+		"header": {
+		  "set-cookie": "ASP.NET_SessionId"
+		}
+	  }
+	},
+	{
+	  "php": {
+		"header": {
+		  "set-cookie": "PHPSESSION|PHPSESSID|.php"
+		}
+	  }
+	},
+	{
+	  "python": {
+		"header": {
+		  "set-cookie": "pysid"
+		}
+	  }
+	}
+  ],
+  "framework": [
+	{
+	  "struts2": {
+		"header": {
+		  "body": "Jenkins|asynchPeople|Jenkins ver|projectRelationship"
+		}
+	  }
+	}
+  ],
+  "webserver": [
+	{
+	  "apache": {
+		"header": {
+		  "set-cookie": "Apache"
+		}
+	  },
+	  "WebSphere": {
+		"body": "Ltpatoken|Ltpatoken2|LtpatokenExpiry|LtpatokenUsername|DomAuthSessID"
+	  }
+	}
+  ]
+}
