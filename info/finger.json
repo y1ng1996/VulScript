@@ -3,7 +3,6 @@
 	[
         {
             "name": "gitlab",
-            "header": {},
             "body": "GitLab Community Edition|navbar-gitlab|gon.default_issues_tracker|gon.api_version"
         },
         {
@@ -28,13 +27,15 @@
         },
         {
             "name": "resin",
-            "header": {}
         },
         {
             "name": "reviewBoard",
-            "header": {
-                "set-cookie": "Resin"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "Resin"
+                }
+            ]
         },
         {
             "name": "phpmyadmin",
@@ -42,9 +43,12 @@
         },
         {
             "name": "zabbix",
-            "header": {
-                "set-cookie": "zbx_sessionid"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "zbx_sessionid"
+                }
+            ]
         },
         {
             "name": "visualsvn",
@@ -56,60 +60,82 @@
         },
         {
             "name": "jenkins",
-            "header": {
-                "body": "Jenkins|asynchPeople|Jenkins ver|projectRelationship"
-            }
+            "body": "Jenkins|asynchPeople|Jenkins ver|projectRelationship",
+            "header": [
+
+            ]
         }
     ],
     "language":
 	[
         {
             "name": "jsp",
-            "header": {
-                "set-cookie": "JSESSIONID|JServSessionId"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "JSESSIONID|JServSessionId"
+                }
+            ]
         },
         {
             "name": "asp",
-            "header": {
-                "set-cookie": "ASPSESSIONID"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "ASPSESSIONID"
+                }
+            ]
         },
         {
             "name": "aspx",
-            "header": {
-                "set-cookie": "ASP.NET_SessionId"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "ASP.NET_SessionId"
+                }
+            ]
         },
         {
             "name": "php",
-            "header": {
-                "set-cookie": "PHPSESSION|PHPSESSID|.php"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "PHPSESSION|PHPSESSID|.php"
+                }
+            ]
         },
         {
             "name": "python",
-            "header": {
-                "set-cookie": "pysid"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "pysid"
+                }
+            ]
         }
     ],
     "framework":
 	[
         {
             "name": "struts2",
-            "header": {
-                "body": "Jenkins|asynchPeople|Jenkins ver|projectRelationship"
-            }
+            "header":
+            [
+                {
+                    "body": "Jenkins|asynchPeople|Jenkins ver|projectRelationship"
+                }
+            ]
         }
     ],
     "webserver":
 	[
         {
             "name": "apache",
-            "header": {
-                "set-cookie": "Apache"
-            }
+            "header":
+            [
+                {
+                    "set-cookie": "Apache"
+                }
+            ]
         },
         {
             "name": "WebSphere",
